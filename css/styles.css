@@ -14,8 +14,8 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: auto;
     height: auto;
-    background: rgb(15,8,124);
-background: linear-gradient(90deg, rgba(15,8,124,1) 4%, rgba(22,22,175,1) 30%, rgba(45,136,226,1) 87%);
+    background: rgb(15,4,87);
+    background: linear-gradient(90deg, rgba(15,4,87,1) 0%, rgba(32,2,192,1) 100%);
 }
   
 img{
@@ -43,11 +43,36 @@ a{
     width: 200px;
     padding: 4px;
     text-align: center;
-    color: var(--azul);
+    color: var(--azul);animation-name: efeito;
+    animation-duration: 3s;
+    animation-iteration-count: calc(2);
+    animation-delay: 2s;
+    animation-timing-function:linear;
 }
 a:hover{
     color: var(--branco);
+    
 }
 i{
     margin-right:8px;
+}
+@keyframes efeito {
+    50%{
+        transform: translate(0px,10px);
+        -webkit-transform: translate(0px,10px);
+    }
+    10%{
+        transform: scale(0.9,0.9);
+        -webkit-transform : scale(0.9 , 0.09);
+
+    }
+    20%{
+        transform: skew(4deg , 10deg ) ;
+
+    }
+    30%{
+        transform: skew(4deg , -10deg ) ;
+
+    }
+    
 }
